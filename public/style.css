@@ -1,0 +1,101 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 10vh;
+    margin: auto;
+    text-align: center;
+}
+
+.URL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 0vh;
+    margin: auto;
+    text-align: center;
+}
+
+
+.URL-params {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 30vh;
+    margin: auto;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.txn-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.mobile-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.QR {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 40vh;
+    margin-top: 8vh;
+    margin: auto;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    text-align: center;
+    background-color: rgba(199, 199, 199, 0.8);
+    margin: auto;
+    margin-top: 9vh;
+}
+
+label {
+    margin-top: 2vh;
+}
+
+body {
+    background-color: rgba(101, 172, 238, 0.4);
+}
+
+h4 {
+    margin-top: 80px;
+}

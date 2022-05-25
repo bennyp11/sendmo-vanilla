@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+  
+
+<div class="title">
+    <h1>SENDMO</h1>
+</div>
+
+<div class="URL">
+  <label> 
+    <p id="url" type="text" value="default_url"></p>
+  </label>
+</div>
+  
+<div class="URL-params">
+    <div id="urlParams">
+    <br>
+    
+    <div class="mobile-number">
+    <label> Mobile (#)
+      <input id="recipients" type="text" value="5712010452" /><br />
+    </label></div>
+    <div class="amount">
+    <label> Amount ($) 
+      <input id="amount" type="text" value="10" /><br />
+    </label></div>
+  
+    <div class="note">
+    <label> Note
+      <input id="note" type="text" value="Test%20note" /><br />
+    </label></div>
+      <br>
+    </div>
+  </label></div>
+
+<div class="QR">
+    <p></p>
+  <h4> QR Code
+      
+  <div id="qrcode"><p></p></div>
+  </h4></div>
+  
+  <script type="text/javascript">
+var qrcode = new QRCode("qrcode");
+
+function makeURL () {
+  var urlText = "venmo://paycharge?txn=pay"+
+    "&recipients="+document.getElementById("recipients").value+
+    "&amount="+document.getElementById("amount").value+
+    "&note="+document.getElementById("note").value
+    
+  document.getElementById("url").value = urlText
+  
+}
+function makeCode () {		
+	var elText = document.getElementById("url");
+	
+	if (!elText.value) {
+		alert("Input a text");
+		elText.focus();
+		return;
+	}
+	
+	qrcode.makeCode(elText.value);
+}
+
+makeURL();
+makeCode();
+
+
+
+$("#txn, #recipients, #amount, #note").
+	on("blur", function () {
+		makeURL();
+    makeCode();
+	}).
+	on("keyup", function (e) {
+      
+			makeURL();
+      makeCode();
+		}
+	);
+    
+$("#text").
+	on("blur", function () {
+		makeCode();
+	}).
+	on("keyup", function (e) {
+      
+			makeCode();
+		}
+	);
+</script>
+  
+</body>
+<div class="footer">
+<footer>
+    <p>Made with ❤️ by Danny Doom & Benny P</p>
+    <p><a href="mailto:ben.r.pollock@gmail.com">Buy us a coffee.</a></p>
+  </footer>
+</div>
+</html>

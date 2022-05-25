@@ -1,0 +1,14 @@
+{
+  "name": "sendmo-online",
+  "version": "1.0.0",
+  "description": "sendmo on https",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
